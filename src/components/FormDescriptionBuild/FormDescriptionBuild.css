@@ -1,0 +1,26 @@
+.form-fields {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+  color: #c21926;
+}
+
+.form-fields form {
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 20px;
+  padding: 36px 64px;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0,0.8);
+}
+
+.selects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
