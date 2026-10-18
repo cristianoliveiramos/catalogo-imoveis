@@ -4,30 +4,18 @@
 }
 
 div > .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
-  color: var(--main-color);  
-  width: 100%;
+  color: var(--main-color) !important;  
+  width: 100%;  
 }
 
-div > .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
-  color: var(--main-color);
+.MuiInputBase-input {
+  color: var(--main-color) !important;
 }
 
-div > .css-1d3z3hw-MuiOutlinedInput-notchedOutline::before {
-  border-bottom: 1px solid var(--main-color);  
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--main-color) !important;
 }
 
-div > .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:hover:not(.Mui-disabled, .Mui-error)::before {
-  border-bottom: 1px solid var(--main-color);
-}
-
-div > .css-1u3bzj6-MuiFormControl-root-MuiTextField-root::after {
-  border-bottom: 2px solid var(--main-color);
-}
-
-div > .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input::placeholder {
-  color: var(--main-color);
-}
-
-div > .css-o943dk-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
-  color: var(--main-color);
+.css-1ff8729-MuiInputBase-root-MuiFilledInput-root:after {
+  border-bottom: 2px solid var(--main-color) !important;
 }

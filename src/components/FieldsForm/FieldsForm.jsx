@@ -3,7 +3,6 @@ import "./FieldsForm.css";
 import TextField from '@mui/material/TextField';
 import React from "react";
 
-
 export const FieldsForm = (props) => {
   const typedValue = (e) => props.whenType(e.target.value);
   const inputRef = useRef(null);
