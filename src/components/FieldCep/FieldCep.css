@@ -19,3 +19,12 @@ div > .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
 .css-1ff8729-MuiInputBase-root-MuiFilledInput-root:after {
   border-bottom: 2px solid var(--main-color) !important;
 }
+.css-10botns-MuiInputBase-input-MuiFilledInput-input {
+  color: var(--main-color) !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

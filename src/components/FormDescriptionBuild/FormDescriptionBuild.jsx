@@ -6,6 +6,7 @@ import SelectBuilds from "../SelectBuilds";
 import Button from "../Button";
 import { FieldCep } from "../FieldCep/FieldCep";
 import InputAdornment from "@mui/material/InputAdornment";
+import { colors } from "@mui/material";
 
 export const FormDescriptionBuild = () => {
   const [address, setAddress] = useState("");
@@ -20,8 +21,8 @@ export const FormDescriptionBuild = () => {
   const [lightFee, setLightFee] = useState();
   const [waterFee, setWaterFee] = useState();
   const [valueMonthFee, setValueMonthFee] = useState(0);
-  const [iptuFee, setIptuFee] = useState(0);
-  const [fireFee, setFireFee] = useState(0);
+  const [iptuFee, setIptuFee] = useState(undefined);
+  const [fireFee, setFireFee] = useState(undefined);
   const [funebonFee, setFunesbonFee] = useState("");
   const [totalYearFee, setTotalYearFee] = useState("");
   const [contract, setContract] = useState("");
@@ -82,6 +83,7 @@ export const FormDescriptionBuild = () => {
           value={number}
           whenType={(value) => setNumber(value)}
           type="text"
+          required
         />
         <FieldsForm
           name="Complemento"
@@ -96,7 +98,7 @@ export const FormDescriptionBuild = () => {
           value={zipCode}
           required
           whenType={(value) => setZipCode(value)}
-          type="text"
+          type="number"
           onblur={() => checkedCep(zipCode)}
         />
         <FieldsForm
@@ -159,27 +161,28 @@ export const FormDescriptionBuild = () => {
             readOnly: true,
           }}
           value={valueMonthFee}
+          disabled
+          placeholder="R$00.00"
           type="number"
-          placeholder="R$00.00"          
         />
 
         {/* <CurrencyInput decimalSeparator=',' groupSeparator='.' intlConfig={{locale: 'pt-BR', currency: 'BRL'}} name="Valor Total das Taxas mensais" disabled/> */}
         <FieldsForm
           name="Taxa do IPTU"
-          placeholder="Digite o valor das taxas..."
+          placeholder="Digite o valor do IPTU..."
           value={iptuFee}
           required
           whenType={(value) => setIptuFee(value)}
-          type="text"
+          type="number"
         />
         {/* <FieldsForm name="Valor das taxas" placeholder="Digite o valor das taxas..." value={rentFee} required whenType={value => setRentFee(value)} type="text"/> */}
 
         <FieldsForm
+          name="Seguro incêncio"
           placeholder="Digite o valor da taxa..."
-          value={fireFee}
-          required
+          value={fireFee}          
           whenType={(value) => setFireFee(value)}
-          type="text"
+          type="number"
           sx={{ m: 1, width: "25ch" }}
           // startAdornment={<InputAdornment position="start">R$</InputAdornment>}
           InputProps={{
@@ -217,9 +220,7 @@ export const FormDescriptionBuild = () => {
 
         <h3>Garantia do contrato</h3>
         <FieldsForm
-          name="Modalidade"
-          value={contract}
-          whenType={(value) => setContract(value)}
+          name="Modalidade"          
           type="text"
         />
 
@@ -228,7 +229,7 @@ export const FormDescriptionBuild = () => {
           name="Observação"
           value={observations}
           whenType={(value) => setObservations(value)}
-          type="text"
+          type="text"          
         />
 
         <Button>Salvar</Button>
